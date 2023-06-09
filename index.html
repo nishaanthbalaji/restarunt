@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="resturant" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: "Oswald", sans-serif;
+    }
+    .head {
+      text-align: center;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+    .line {
+      height: 7px;
+      width: 100px;
+      background-color: goldenrod;
+      margin: 0px auto;
+    }
+    .button {
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 5px;
+      margin: 7px;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+      border-radius: 5px;
+    }
+    button:hover {
+      border: 1px solid blue;
+    }
+    .photo {
+      height: 150px;
+      width: 200px;
+    }
+    #menu {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .list {
+      width: 500px;
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+
+    .all {
+      display: none;
+      grid-template-areas:
+        "a b"
+        "c d"
+        "e f"
+        "g h";
+    }
+    .one {
+      grid-area: a;
+    }
+    .two {
+      grid-area: b;
+    }
+    .three {
+      grid-area: c;
+    }
+    .four {
+      grid-area: d;
+    }
+    .five {
+      grid-area: e;
+    }
+    .six {
+      grid-area: f;
+    }
+    .seven {
+      grid-area: g;
+    }
+    .eight {
+      grid-area: h;
+    }
+    .nine {
+      grid-area: i;
+    }
+    .breakfast {
+      display: none;
+      grid-template-areas:
+        "a b"
+        "c d";
+    }
+    .Bone {
+      grid-area: a;
+    }
+    .Btwo {
+      grid-area: b;
+    }
+    .Bthree {
+      grid-area: c;
+    }
+    .lunch {
+      display: none;
+      grid-template-areas: "a b";
+    }
+    .Lone {
+      grid-area: a;
+    }
+    .Ltwo {
+      grid-area: b;
+    }
+    .shake {
+      display: none;
+      grid-template-areas:
+        "a b"
+        "c d";
+    }
+    .Lone {
+      grid-area: a;
+    }
+    .Ltwo {
+      grid-area: b;
+    }
+    .Lthree {
+      grid-area: c;
+    }
+    .active {
+      display: grid;
+    }
+    /* .remove {
+      display: none;
+    } */
+  </style>
+  <body>
+    <section id="main">
+      <div class="head">Our Menu</div>
+      <div class="line"></div>
+      <div class="button">
+        <button>All</button>
+        <button>Breakfast</button>
+        <button>Lunch</button>
+        <button>Shakes</button>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="all active">
+        <div class="one list" style="display: flex">
+          <img
+            src="./egg.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Egg Attack</p>
+              <p class="price" style="color: goldenrod">$22.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                similique eveniet beatae. Temporibus, minus debitis vitae quasi
+                veniam rerum nemo!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="two list" style="display: flex">
+          <img
+            src="./noodles.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Noodles</p>
+              <p class="price" style="color: goldenrod">$30</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? Fugit dolorum molestias accusamus quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="three list" style="display: flex">
+          <img
+            src="./ore0.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+            ;
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Oreo shake</p>
+              <p class="price" style="color: goldenrod">$35</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? Fugit dolorum molestias accusamus quisquam jhgh
+                jgjj qwe we
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="four list" style="display: flex">
+          <img
+            src="./bacon.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Dinner double/p></p>
+              <p class="price" style="color: goldenrod">$39.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet adipisicing elit. Amet, praesentium?
+                Fugit dolorum molestias accusamus quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="five list" style="display: flex">
+          <img
+            src="./godzilla.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Godzilla shake</p>
+              <p class="price" style="color: goldenrod">$50</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur hjhj vjhj bjgjvj
+                adipisicing elit. Amet, praesentium? Fugit dolorum molestias
+                accusamus quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="six list" style="display: flex">
+          <img
+            src="./bread.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Bread Sandwhich</p>
+              <p class="price" style="color: goldenrod">$27</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit adipisicing elit. Amet, praesentium?
+                Fugit dolorum molestias accusamus quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="seven list" style="display: flex">
+          <img
+            src="./vannila.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Vannila shake</p>
+              <p class="price" style="color: goldenrod">$30.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? Fugit dolorum molestias accusamus quisquam?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="eight list" style="display: flex">
+          <img
+            src="./american.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">America burger</p>
+              <p class="price" style="color: goldenrod">$40</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? Fugit dolorum molestias accusamus
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breakfast">
+        <div class="Bone list" style="display: flex">
+          <img
+            src="./egg.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Egg Attack</p>
+              <p class="price" style="color: goldenrod">$22.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit gj jksxds jshdk amet consectetur
+                adipisicing elit. Amet, praesentium? Fugit dolorum molestias
+                accusamus
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Btwo list" style="display: flex">
+          <img
+            src="./bread.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Bread Sandwhich</p>
+              <p class="price" style="color: goldenrod">$27</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? Fugit dolorum molestias accusamus
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Bthree list" style="display: flex">
+          <img
+            src="./bacon.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Dinner Double</p>
+              <p class="price" style="color: goldenrod">$39.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? dolorum molestias accusamus
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lunch">
+        <div class="Lone list" style="display: flex">
+          <img
+            src="./american.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">American burger</p>
+              <p class="price" style="color: goldenrod">$40</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? dolorum
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Ltwo list" style="display: flex">
+          <img
+            src="./noodles.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Noodles</p>
+              <p class="price" style="color: goldenrod">$30</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum sit amet consectetur adipisicing elit. Amet,
+                praesentium? dolorum
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shake">
+        <div class="Sone list" style="display: flex">
+          <img
+            src="./godzilla.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Godzilla shake</p>
+              <p class="price" style="color: goldenrod">$50</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? dolorum jjj sjhsjs susyys
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Stwo list" style="display: flex">
+          <img
+            src="./vannila.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Vanilla Shake</p>
+              <p class="price" style="color: goldenrod">$30.99</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                praesentium? dolorum
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Sthree list" style="display: flex">
+          <img
+            src="./ore0.jpg.jpg"
+            alt="one"
+            height="150px"
+            width="200px"
+            style="border: 1px solid goldenrod"
+            class="photo"
+          />
+          <div style="margin-left: 15px">
+            <div
+              class="item"
+              style="display: flex; justify-content: space-between"
+            >
+              <p class="name" style="font-weight: bolder">Orea Shake</p>
+              <p class="price" style="color: goldenrod">$35</p>
+            </div>
+            <div>
+              <hr />
+              <p style="opacity: 0.8">
+                Lorem, ipsum dolor sit consectetur adipisicing elit. Amet,
+                praesentium? dolorum
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let content = document.querySelectorAll("#menu>div");
+      console.log(content);
+      let button = document.querySelectorAll(".button >button");
+      console.log(button);
+
+      button.forEach((ele, index) => {
+        // console.log(ele);
+        ele.addEventListener("click", () => {
+          console.log(ele);
+          content.forEach((item) => item.classList.remove("active"));
+          button.forEach((button) => button.classList.remove("active"));
+
+          content[index].classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
